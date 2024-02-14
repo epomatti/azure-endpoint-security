@@ -6,12 +6,12 @@ resource "azuread_user" "administrator" {
   password            = var.intune_user_password
 }
 
-resource "azuread_directory_role" "intune_service_administrator" {
-  display_name = "Intune Service Administrator"
+resource "azuread_directory_role" "intune_administrator" {
+  display_name = "Intune Administrator"
 }
 
-resource "azuread_directory_role_assignment" "intune_service_administrator" {
-  role_id             = azuread_directory_role.intune_service_administrator.template_id
+resource "azuread_directory_role_assignment" "intune_administrator" {
+  role_id             = azuread_directory_role.intune_administrator.template_id
   principal_object_id = azuread_user.administrator.object_id
 }
 

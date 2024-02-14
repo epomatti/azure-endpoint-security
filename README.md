@@ -24,3 +24,7 @@ Using this user will be able to have access to:
 
 - https://intune.microsoft.com
 - https://security.microsoft.com
+
+For Local Administrator Password Solution (LAPS), make sure you've enabled it in the device settings blade:
+
+<img src=".assets/laps.png" />

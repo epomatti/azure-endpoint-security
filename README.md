@@ -28,3 +28,19 @@ Using this user will be able to have access to:
 For Local Administrator Password Solution (LAPS), make sure you've enabled it in the device settings blade:
 
 <img src=".assets/laps.png" />
+
+
+```sh
+az vm image list-skus -l eastus2 -f Windows-11 -p MicrosoftWindowsDesktop --query [].name
+```
+
+Apparently the suffix are:
+
+| Code | Column 2 Header |
+| -------------- | -------------- |
+|  avd             |        Azure Virtual Desktop       |
+|   ent             |       Enterprise        |
+|   entn             |     Enterprise (not with media player)           |
+|   pro             |     Professional           |
+|   pro-zh-cn             |     Simplified Chinese          |
+|   pron             |     Professional (not with media player)           |

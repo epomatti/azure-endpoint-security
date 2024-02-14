@@ -11,6 +11,14 @@ variable "vm_windows_size" {
   type = string
 }
 
+variable "create_windows_server" {
+  type = bool
+}
+
+variable "create_windows_11" {
+  type = bool
+}
+
 ### Entra ID ###
 variable "entraid_tenant_domain" {
   type = string

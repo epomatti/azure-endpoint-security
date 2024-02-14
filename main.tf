@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "3.91.0"
     }
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "2.47.0"
+    }
   }
 }
 
@@ -34,4 +38,12 @@ module "vm_windows" {
   location            = azurerm_resource_group.default.location
   subnet_id           = module.vnet.subnet_id
   size                = var.vm_windows_size
+}
+
+module "entraid" {
+  source                = "./modules/entraid"
+  entraid_tenant_domain = var.entraid_tenant_domain
+  intune_user_name      = var.entraid_intune_user_name
+  intune_user_password  = var.entraid_intune_user_password
+  resource_group_id     = azurerm_resource_group.default.id
 }

@@ -1,9 +1,8 @@
-workload = "healthcare"
+location = "eastus2"
+workload = "endpoint"
 
-threat_intelligence_indicator_pattern           = "example2.com"
-threat_intelligence_indicator_validate_from_utc = "2023-11-27T00:00:00Z"
+vm_windows_size = "Standard_B4as_v2"
 
-create_vm_windows = true
-vm_windows_size   = "Standard_B4as_v2"
-
-create_waf = false
+entraid_tenant_domain        = "<>.onmicrosoft.com"
+entraid_intune_user_name     = "IntuneAdmin"
+entraid_intune_user_password = "P@ssw0rd.123"

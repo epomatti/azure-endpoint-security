@@ -1,17 +1,17 @@
 resource "azurerm_public_ip" "default" {
-  name                = "pip-windows"
+  name                = "pip-windows11"
   resource_group_name = var.resource_group_name
   location            = var.location
   allocation_method   = "Static"
 }
 
 resource "azurerm_network_interface" "windows" {
-  name                = "nic-windows"
+  name                = "nic-windows11"
   resource_group_name = var.resource_group_name
   location            = var.location
 
   ip_configuration {
-    name                          = "windows"
+    name                          = "windows11"
     subnet_id                     = var.subnet_id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.default.id
@@ -32,7 +32,7 @@ resource "azurerm_windows_virtual_machine" "windows" {
   network_interface_ids = [azurerm_network_interface.windows.id]
 
   os_disk {
-    name                 = "osdisk-windows"
+    name                 = "osdisk-windows11"
     caching              = "ReadOnly"
     storage_account_type = "StandardSSD_LRS"
   }

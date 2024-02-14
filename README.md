@@ -14,3 +14,13 @@ Create the resources:
 terraform init
 terraform apply -auto-approve
 ```
+
+A user `IntuneAdmin@yourdomain` will be created with the following permissions:
+
+- `Intune Administrator`
+- `Security Administrator`
+
+Using this user will be able to have access to:
+
+- https://intune.microsoft.com
+- https://security.microsoft.com

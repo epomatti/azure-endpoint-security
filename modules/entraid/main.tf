@@ -10,8 +10,17 @@ resource "azuread_directory_role" "intune_administrator" {
   display_name = "Intune Administrator"
 }
 
+resource "azuread_directory_role" "security_administrator" {
+  display_name = "Security Administrator"
+}
+
 resource "azuread_directory_role_assignment" "intune_administrator" {
   role_id             = azuread_directory_role.intune_administrator.template_id
+  principal_object_id = azuread_user.administrator.object_id
+}
+
+resource "azuread_directory_role_assignment" "security_administrator" {
+  role_id             = azuread_directory_role.security_administrator.template_id
   principal_object_id = azuread_user.administrator.object_id
 }
 

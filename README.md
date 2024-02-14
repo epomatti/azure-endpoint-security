@@ -25,16 +25,28 @@ Using this user will be able to have access to:
 - https://intune.microsoft.com
 - https://security.microsoft.com
 
+
+## LAPS
+
 For Local Administrator Password Solution (LAPS), make sure you've enabled it in the device settings blade:
 
 <img src=".assets/laps.png" />
 
+In Intune, create an account protection policy:
+
+1. Select Endpoint security > Account protection > Create policy
+2. Select Windows 10 and Windows LAPS
+3. Create the policy for all devices
+
+## Windows 11 images
+
+To find updated Windows 11 images:
 
 ```sh
 az vm image list-skus -l eastus2 -f Windows-11 -p MicrosoftWindowsDesktop --query [].name
 ```
 
-Apparently the suffix are:
+Suffix are:
 
 | Code | Column 2 Header |
 | -------------- | -------------- |

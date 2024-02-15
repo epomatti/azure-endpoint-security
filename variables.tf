@@ -20,15 +20,15 @@ variable "create_windows_11" {
 }
 
 ### Entra ID ###
-variable "entraid_tenant_domain" {
-  type = string
-}
+# variable "entraid_tenant_domain" {
+#   type = string
+# }
 
-variable "entraid_intune_user_name" {
-  type = string
-}
+# variable "entraid_intune_user_name" {
+#   type = string
+# }
 
-variable "entraid_intune_user_password" {
-  type      = string
-  sensitive = true
-}
+# variable "entraid_intune_user_password" {
+#   type      = string
+#   sensitive = true
+# }

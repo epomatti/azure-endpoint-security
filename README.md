@@ -34,6 +34,17 @@ Needs addon
 
 https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide
 
+https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/why-use-microsoft-defender-antivirus?view=o365-worldwide
+
+
+Intune EDR policy (onboard)
+
+https://youtu.be/wAiH_lDveug
+
+Device guard - Prevents malicious code from running by ensuring only allowed and known good code can run, such as malware or ransomware. (Only Windows Enterprise client)
+
+https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/enable-controlled-folders?view=o365-worldwide
+
 ## Company Portal
 
 A license is required.

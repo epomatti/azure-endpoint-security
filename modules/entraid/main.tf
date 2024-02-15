@@ -4,6 +4,7 @@ resource "azuread_user" "administrator" {
   display_name        = var.intune_user_name
   mail_nickname       = var.intune_user_name
   password            = var.intune_user_password
+  usage_location      = "BR"
 }
 
 resource "azuread_directory_role" "intune_administrator" {

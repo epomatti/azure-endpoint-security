@@ -25,6 +25,26 @@ Using this user will be able to have access to:
 - https://intune.microsoft.com
 - https://security.microsoft.com
 
+## Defender for Endpoint
+
+Connect MDE with Intune. (Microsoft Intune Plan)
+
+
+Needs addon
+
+https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide
+
+## Company Portal
+
+A license is required.
+
+Azure Advanced Threat Protection
+
+Make sure to also allow MDM user scope to enroll (Mobility MDM and WIP) - Microsoft Intune
+
+
+https://www.youtube.com/watch?v=z3R_aq0pu0Y
+
 
 ## LAPS
 

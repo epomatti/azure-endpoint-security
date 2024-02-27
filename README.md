@@ -1,6 +1,6 @@
 # Azure Endpoint Security
 
-Resources to Intune, Defender for Endpoint, and more.
+Sample resources for Intune, Defender for Endpoint, and more.
 
 Set the variables file:
 
@@ -20,7 +20,7 @@ A user `IntuneAdmin@yourdomain` will be created with the following permissions:
 - `Intune Administrator`
 - `Security Administrator`
 
-Using this user will be able to have access to:
+This will allow access to the following applications:
 
 - https://intune.microsoft.com
 - https://security.microsoft.com
@@ -29,33 +29,25 @@ Using this user will be able to have access to:
 
 Connect MDE with Intune. (Microsoft Intune Plan)
 
+> 💡 An addon or equivalent [license][1] needs to be purchased for this integration.
 
-Needs addon
-
-https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide
-
-https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/why-use-microsoft-defender-antivirus?view=o365-worldwide
-
+Microsoft Defender Antivirus [works together][2] with Microsoft Defender for Endpoint
 
 Intune EDR policy (onboard)
 
-https://youtu.be/wAiH_lDveug
+This [video][3] shows how to configure Device Guard with Microsoft Intune.
 
-Device guard - Prevents malicious code from running by ensuring only allowed and known good code can run, such as malware or ransomware. (Only Windows Enterprise client)
+> 💡 Device guard - Prevents malicious code from running by ensuring only allowed and known good code can run, such as malware or ransomware. (Only Windows Enterprise client)
 
-https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/enable-controlled-folders?view=o365-worldwide
+Among other available services is [controlled folder access][4].
 
 ## Company Portal
 
-A license is required.
-
-Azure Advanced Threat Protection
+A license is also required. EDR enables Azure Advanced Threat Protection
 
 Make sure to also allow MDM user scope to enroll (Mobility MDM and WIP) - Microsoft Intune
 
-
-https://www.youtube.com/watch?v=z3R_aq0pu0Y
-
+> 💡 This helpful video shows how to enable Defender for Endpoint.
 
 ## LAPS
 
@@ -87,3 +79,10 @@ Suffix are:
 |   pro             |     Professional           |
 |   pro-zh-cn             |     Simplified Chinese          |
 |   pron             |     Professional (not with media player)           |
+
+
+[1]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide
+[2]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/why-use-microsoft-defender-antivirus?view=o365-worldwide
+[3]: https://youtu.be/wAiH_lDveug
+[4]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/enable-controlled-folders?view=o365-worldwide
+[5]: https://www.youtube.com/watch?v=z3R_aq0pu0Y

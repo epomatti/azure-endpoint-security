@@ -8,6 +8,8 @@ Set the variables file:
 cp config/template.tfvars .auto.tfvars
 ```
 
+Check for the latest [Windows images](#windows-11-images) available.
+
 Create the resources:
 
 ```sh
@@ -24,6 +26,8 @@ This will allow access to the following applications:
 
 - https://intune.microsoft.com
 - https://security.microsoft.com
+
+An appropriate license needs to be assigned to the user in order to activate Intune.
 
 ## Defender for Endpoint
 
@@ -61,6 +65,31 @@ In Intune, create an account protection policy:
 2. Select Windows 10 and Windows LAPS
 3. Create the policy for all devices
 
+## Intune
+
+If MDE is enabled, it can take a while after joining Intune until everything is synced.
+
+<img src=".assets/intune-endpoint.png" />
+
+Access will be granted after the compliance check:
+
+<img src=".assets/intune-status.png" />
+
+## Web protection
+
+This section shows [web protection][6].
+
+### Attack Surface Reduction - Web protection
+
+An example with Microsoft Edge:
+
+<img src=".assets/intune-webprotection.png" />
+
+Select the appropriate configuration for the profile:
+
+<img src=".assets/intune-webprotection-profile.png" />
+
+
 ## Windows 11 images
 
 To find updated Windows 11 images:
@@ -86,3 +115,4 @@ Suffix are:
 [3]: https://youtu.be/wAiH_lDveug
 [4]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/enable-controlled-folders?view=o365-worldwide
 [5]: https://www.youtube.com/watch?v=z3R_aq0pu0Y
+[6]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-threat-protection?view=o365-worldwide

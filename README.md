@@ -107,6 +107,9 @@ A policy can be created using a blade in the same view above, like this:
 
 <img src=".assets/intune-defender-webcontentfiltering2.png" />
 
+## Device Guard
+
+<img src=".assets/intune-deviceguard.png" />
 
 ## Windows 11 images
 

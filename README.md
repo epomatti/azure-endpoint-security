@@ -93,6 +93,14 @@ To test SmartScreen, use a [sample URL][7], such as this [demo malware][8] page.
 
 <img src=".assets/intune-smartscreen.png" />
 
+Security can be further enhanced with [Alerts][9], and monitoring can use [Reports][10].
+
+### Defender - Web content filtering
+
+With MDE, it is also possible to turn on web content filtering:
+
+<img src=".assets/intune-defender-webcontentfiltering.png" />
+
 ## Windows 11 images
 
 To find updated Windows 11 images:
@@ -121,3 +129,6 @@ Suffix are:
 [6]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-threat-protection?view=o365-worldwide
 [7]: https://demo.wd.microsoft.com/Page/UrlRep
 [8]: https://demo.smartscreen.msft.net/other/malware.html
+[9]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-protection-response?view=o365-worldwide
+[10]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-protection-monitoring?view=o365-worldwide
+[11]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-content-filtering?view=o365-worldwide

@@ -109,6 +109,8 @@ A policy can be created using a blade in the same view above, like this:
 
 ## Device Guard
 
+Credential guard, VBS, and UEFI, memory integrity, etc.
+
 <img src=".assets/intune-deviceguard.png" />
 
 ## Windows 11 images

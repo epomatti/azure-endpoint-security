@@ -89,6 +89,9 @@ Select the appropriate configuration for the profile:
 
 <img src=".assets/intune-webprotection-profile.png" />
 
+To test SmartScreen, use a [sample URL][7], such as this [demo malware][8] page.
+
+<img src=".assets/intune-smartscreen.png" />
 
 ## Windows 11 images
 
@@ -116,3 +119,5 @@ Suffix are:
 [4]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/enable-controlled-folders?view=o365-worldwide
 [5]: https://www.youtube.com/watch?v=z3R_aq0pu0Y
 [6]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-threat-protection?view=o365-worldwide
+[7]: https://demo.wd.microsoft.com/Page/UrlRep
+[8]: https://demo.smartscreen.msft.net/other/malware.html

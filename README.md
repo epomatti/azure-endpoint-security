@@ -32,10 +32,12 @@ A user `IntuneAdmin@yourdomain` will be created with the following permissions:
 
 This will allow access to the following applications:
 
+> [!NOTE]
+> An appropriate [license](https://learn.microsoft.com/en-us/mem/intune/fundamentals/licenses) needs to be assigned to the user in order to activate Intune.
+
 - https://intune.microsoft.com
 - https://security.microsoft.com
 
-An appropriate license needs to be assigned to the user in order to activate Intune.
 
 ## Defender for Endpoint
 

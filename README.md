@@ -5,10 +5,18 @@ Sample resources for Intune, Defender for Endpoint, and more.
 Set the variables file:
 
 ```sh
-cp config/template.tfvars .auto.tfvars
+cp config/local.auto.tfvars .auto.tfvars
 ```
 
-Check for the latest [Windows images](#windows-11-images) available.
+Set the required variables:
+
+```terraform
+subscription_id       = ""
+entraid_tenant_domain = ""
+```
+
+> [!TIP]
+> Check for the latest [Windows images](#windows-images) available.
 
 Create the resources:
 
@@ -113,17 +121,27 @@ Credential guard, VBS, and UEFI, memory integrity, etc.
 
 <img src=".assets/intune-deviceguard.png" />
 
-## Windows 11 images
+## Windows images
+
+### Windows Server
+
+To find updated Windows Server images:
+
+```sh
+az vm image list-skus -l eastus2 -p MicrosoftWindowsServer -f WindowsServer --query [].name
+```
+
+### Windows 11
 
 To find updated Windows 11 images:
 
 ```sh
-az vm image list-skus -l eastus2 -f Windows-11 -p MicrosoftWindowsDesktop --query [].name
+az vm image list-skus -l eastus2 -p MicrosoftWindowsDesktop -f Windows-11 --query [].name
 ```
 
-Suffix are:
+Suffixes details:
 
-| Code | Column 2 Header |
+| Code | Description |
 | -------------- | -------------- |
 |  avd             |        Azure Virtual Desktop       |
 |   ent             |       Enterprise        |

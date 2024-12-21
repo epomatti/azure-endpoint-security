@@ -1,6 +1,9 @@
+variable "subscription_id" {
+  type = string
+}
+
 variable "location" {
-  type    = string
-  default = "eastus2"
+  type = string
 }
 
 variable "workload" {

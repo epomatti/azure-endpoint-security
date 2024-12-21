@@ -4,8 +4,13 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "azuread",
+        "Entra",
+        "entraid",
         "intune",
-        "smartscreen"
+        "onmicrosoft",
+        "smartscreen",
+        "vnet"
     ],
     "ignoreWords": [],
     "import": []

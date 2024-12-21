@@ -28,5 +28,6 @@ resource "azuread_directory_role_assignment" "security_administrator" {
 resource "azurerm_role_assignment" "reader" {
   scope                = var.resource_group_id
   role_definition_name = "Reader"
+  principal_type       = "User"
   principal_id         = azuread_user.administrator.object_id
 }

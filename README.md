@@ -55,6 +55,10 @@ This [video][3] shows how to configure Device Guard with Microsoft Intune.
 
 Among other available services is [controlled folder access][4].
 
+## Admins
+
+Guests may be allowed as administrators through the [unlicensed admins](https://learn.microsoft.com/en-us/mem/intune/fundamentals/unlicensed-admins) option.
+
 ## Company Portal
 
 A license is also required. EDR enables Azure Advanced Threat Protection

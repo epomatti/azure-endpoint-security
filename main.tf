@@ -51,10 +51,10 @@ module "vm_windows11" {
   size                = var.vm_windows_size
 }
 
-# module "entraid" {
-#   source                = "./modules/entraid"
-#   entraid_tenant_domain = var.entraid_tenant_domain
-#   intune_user_name      = var.entraid_intune_user_name
-#   intune_user_password  = var.entraid_intune_user_password
-#   resource_group_id     = azurerm_resource_group.default.id
-# }
+module "entraid" {
+  source                = "./modules/entraid"
+  entraid_tenant_domain = var.entraid_tenant_domain
+  intune_user_name      = var.entraid_intune_user_name
+  intune_user_password  = var.entraid_intune_user_password
+  resource_group_id     = azurerm_resource_group.default.id
+}

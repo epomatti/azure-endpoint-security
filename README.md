@@ -8,7 +8,7 @@ Set the variables file:
 cp config/local.auto.tfvars .auto.tfvars
 ```
 
-Set the required variables:
+Set the **required variables**:
 
 ```terraform
 subscription_id       = ""

@@ -9,6 +9,6 @@ create_windows_server = true
 create_windows_11     = true
 
 # Entra ID
-# entraid_tenant_domain        = "<>.onmicrosoft.com"
-# entraid_intune_user_name     = "IntuneAdmin"
-# entraid_intune_user_password = "P@ssw0rd.123"
+entraid_tenant_domain        = "<>.onmicrosoft.com"
+entraid_intune_user_name     = "IntuneAdmin"
+entraid_intune_user_password = "P@ssw0rd.123"

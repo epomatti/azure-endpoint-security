@@ -59,6 +59,8 @@ Among other available services is [controlled folder access][4].
 
 Guests may be allowed as administrators through the [unlicensed admins](https://learn.microsoft.com/en-us/mem/intune/fundamentals/unlicensed-admins) option.
 
+Device-only licenses are [also available](https://learn.microsoft.com/en-us/mem/intune/fundamentals/licenses#device-only-licenses) for devices that are not associated with a user.
+
 ## Company Portal
 
 A license is also required. EDR enables Azure Advanced Threat Protection

@@ -1,4 +1,4 @@
-variable "subscription_id" {
+variable "workload" {
   type = string
 }
 
@@ -6,22 +6,12 @@ variable "location" {
   type = string
 }
 
-variable "workload" {
+variable "resource_group_name" {
   type = string
 }
 
-variable "vm_windows_size" {
+variable "subnet_id" {
   type = string
-}
-
-variable "create_windows_server" {
-  type = bool
-}
-
-### Windows Desktop ###
-
-variable "create_windows_desktop" {
-  type = bool
 }
 
 variable "windows_desktop_size" {
@@ -51,22 +41,4 @@ variable "windows_desktop_image_sku" {
 
 variable "windows_desktop_image_version" {
   type = string
-}
-
-### Entra ID ###
-variable "entraid_tenant_domain" {
-  type = string
-}
-
-variable "entraid_intune_admin_username" {
-  type = string
-}
-
-variable "entraid_intune_endpoint_username" {
-  type = string
-}
-
-variable "entraid_intune_user_password" {
-  type      = string
-  sensitive = true
 }

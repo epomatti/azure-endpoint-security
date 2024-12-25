@@ -2,6 +2,8 @@
 
 Sample resources for Intune, Defender for Endpoint, and more.
 
+## Setup
+
 Set the variables file:
 
 ```sh
@@ -25,18 +27,30 @@ terraform init
 terraform apply -auto-approve
 ```
 
-A user `IntuneAdmin@yourdomain` will be created with the following permissions:
+### Users
+
+> [!IMPORTANT]
+> You must manually assign an Intune [license](https://learn.microsoft.com/en-us/mem/intune/fundamentals/licenses) to all users.
+
+The users described in this section will be created.
+
+#### Intune administrator
+
+A user named `IntuneAdmin@example.com` will be created to manage Intune.
+
+The following roles will be assigned:
 
 - `Intune Administrator`
 - `Security Administrator`
 
 This will allow access to the following applications:
 
-> [!NOTE]
-> An appropriate [license](https://learn.microsoft.com/en-us/mem/intune/fundamentals/licenses) needs to be assigned to the user in order to activate Intune.
-
 - https://intune.microsoft.com
 - https://security.microsoft.com
+
+#### Endpoint user
+
+A user named `EndpointUser@example.com` will be created to operate the endpoint.
 
 
 ## Defender for Endpoint

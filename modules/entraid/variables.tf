@@ -2,7 +2,11 @@ variable "entraid_tenant_domain" {
   type = string
 }
 
-variable "intune_user_name" {
+variable "entraid_intune_admin_username" {
+  type = string
+}
+
+variable "entraid_intune_endpoint_username" {
   type = string
 }
 

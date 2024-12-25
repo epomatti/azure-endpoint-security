@@ -1,8 +1,17 @@
 resource "azuread_user" "administrator" {
   account_enabled     = true
-  user_principal_name = "${var.intune_user_name}@${var.entraid_tenant_domain}"
-  display_name        = var.intune_user_name
-  mail_nickname       = var.intune_user_name
+  user_principal_name = "${var.entraid_intune_admin_username}@${var.entraid_tenant_domain}"
+  display_name        = var.entraid_intune_admin_username
+  mail_nickname       = var.entraid_intune_admin_username
+  password            = var.intune_user_password
+  usage_location      = "BR"
+}
+
+resource "azuread_user" "endpoint_user" {
+  account_enabled     = true
+  user_principal_name = "${var.entraid_intune_endpoint_username}@${var.entraid_tenant_domain}"
+  display_name        = var.entraid_intune_endpoint_username
+  mail_nickname       = var.entraid_intune_endpoint_username
   password            = var.intune_user_password
   usage_location      = "BR"
 }

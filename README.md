@@ -149,14 +149,14 @@ az vm image list-skus -l eastus2 -p MicrosoftWindowsDesktop -f Windows-11 --quer
 
 Suffixes details:
 
-| Code | Description |
-| -------------- | -------------- |
-|  avd             |        Azure Virtual Desktop       |
-|   ent             |       Enterprise        |
-|   entn             |     Enterprise (not with media player)           |
-|   pro             |     Professional           |
-|   pro-zh-cn             |     Simplified Chinese          |
-|   pron             |     Professional (not with media player)           |
+| Code       | Description                          |
+|------------|--------------------------------------|
+|  avd       | Azure Virtual Desktop                |
+|  ent       | Enterprise                           |
+|  entn      | Enterprise (not with media player)   |
+|  pro       | Professional                         |
+|  pro-zh-cn | Simplified Chinese                   |
+|  pron      | Professional (not with media player) |
 
 
 [1]: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide

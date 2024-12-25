@@ -28,8 +28,14 @@ resource "azuread_group" "intune_endpoint_users" {
   security_enabled = true
 }
 
+resource "azuread_group" "intune_endpoints" {
+  display_name     = "Intune Endpoints"
+  owners           = [local.client_object_id]
+  security_enabled = true
+}
+
 resource "azuread_group_member" "example" {
-  group_object_id  = azuread_group.intune_endpoint_users.id
+  group_object_id  = azuread_group.intune_endpoint_users.object_id
   member_object_id = azuread_user.endpoint_user.object_id
 }
 

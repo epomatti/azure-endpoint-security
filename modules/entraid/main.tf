@@ -1,3 +1,9 @@
+data "azuread_client_config" "current" {}
+
+locals {
+  client_object_id = data.azuread_client_config.current.object_id
+}
+
 resource "azuread_user" "administrator" {
   account_enabled     = true
   user_principal_name = "${var.entraid_intune_admin_username}@${var.entraid_tenant_domain}"
@@ -14,6 +20,17 @@ resource "azuread_user" "endpoint_user" {
   mail_nickname       = var.entraid_intune_endpoint_username
   password            = var.intune_user_password
   usage_location      = "BR"
+}
+
+resource "azuread_group" "intune_endpoint_users" {
+  display_name     = "Intune Endpoint Users"
+  owners           = [local.client_object_id]
+  security_enabled = true
+}
+
+resource "azuread_group_member" "example" {
+  group_object_id  = azuread_group.intune_endpoint_users.id
+  member_object_id = azuread_user.endpoint_user.object_id
 }
 
 resource "azuread_directory_role" "intune_administrator" {

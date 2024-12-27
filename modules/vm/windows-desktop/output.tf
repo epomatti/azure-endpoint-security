@@ -5,3 +5,7 @@ output "public_ip" {
 output "vm_id" {
   value = azurerm_windows_virtual_machine.default.id
 }
+
+output "name" {
+  value = azurerm_windows_virtual_machine.default.name
+}

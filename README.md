@@ -52,6 +52,12 @@ This will allow access to the following applications:
 
 A user named `EndpointUser@example.com` will be created to operate the endpoint.
 
+Depending on the architecture, the device enrollment can take one of these forms:
+
+- [Registered device](https://learn.microsoft.com/en-us/entra/identity/devices/concept-device-registration)
+- [Joined device](https://learn.microsoft.com/en-us/entra/identity/devices/concept-directory-join)
+- [Hybrid joined device](https://learn.microsoft.com/en-us/entra/identity/devices/concept-hybrid-join)
+
 
 ## Defender for Endpoint
 

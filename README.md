@@ -111,6 +111,12 @@ Access will be granted after the compliance check:
 
 <img src=".assets/intune-status.png" />
 
+## BitLocker
+
+## Configuration as Code
+
+Microsoft has provided [instructions](https://techcommunity.microsoft.com/blog/intunecustomersuccess/configuration-as-code-for-microsoft-intune/3701792) on how to manage configuration as code for Intune.
+
 ## Web protection
 
 This section shows [web protection][6].

@@ -11,20 +11,32 @@ terraform {
   }
 }
 
+resource "random_string" "affix" {
+  length  = 5
+  special = false
+  numeric = false
+  upper   = false
+}
+
+locals {
+  affix          = random_string.affix.result
+  resource_affix = "${var.workload}${local.affix}"
+}
+
 resource "azurerm_resource_group" "default" {
-  name     = "rg-${var.workload}"
+  name     = "rg-${local.resource_affix}"
   location = var.location
 }
 
 module "vnet" {
   source              = "./modules/vnet"
-  workload            = var.workload
+  workload            = local.resource_affix
   resource_group_name = azurerm_resource_group.default.name
   location            = azurerm_resource_group.default.location
 }
 
 resource "azurerm_log_analytics_workspace" "default" {
-  name                = "log-${var.workload}"
+  name                = "log-${local.resource_affix}"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku                 = "PerGB2018"
@@ -34,7 +46,7 @@ resource "azurerm_log_analytics_workspace" "default" {
 module "vm_windows_server" {
   count               = var.create_windows_server ? 1 : 0
   source              = "./modules/vm/windows-server"
-  workload            = var.workload
+  workload            = local.resource_affix
   resource_group_name = azurerm_resource_group.default.name
   location            = azurerm_resource_group.default.location
   subnet_id           = module.vnet.subnet_id
@@ -44,7 +56,7 @@ module "vm_windows_server" {
 module "vm_windows_desktop" {
   count                           = var.create_windows_desktop ? 1 : 0
   source                          = "./modules/vm/windows-desktop"
-  workload                        = var.workload
+  workload                        = local.resource_affix
   resource_group_name             = azurerm_resource_group.default.name
   location                        = azurerm_resource_group.default.location
   subnet_id                       = module.vnet.subnet_id

@@ -14,7 +14,8 @@
         "onmicrosoft",
         "osdisk",
         "smartscreen",
-        "vnet"
+        "vnet",
+        "vtpm"
     ],
     "ignoreWords": [],
     "import": []

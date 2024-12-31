@@ -113,6 +113,12 @@ Access will be granted after the compliance check:
 
 ## BitLocker
 
+https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu
+
+https://learn.microsoft.com/en-us/mem/intune/apps/app-management
+
+https://github.com/microsoft/Intune-PowerShell-SDK
+
 ## Configuration as Code
 
 Microsoft has provided [instructions](https://techcommunity.microsoft.com/blog/intunecustomersuccess/configuration-as-code-for-microsoft-intune/3701792) on how to manage configuration as code for Intune.

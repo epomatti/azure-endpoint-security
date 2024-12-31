@@ -34,6 +34,7 @@ resource "azurerm_windows_virtual_machine" "default" {
   admin_username        = var.windows_desktop_admin_username
   admin_password        = var.windows_desktop_admin_password
   network_interface_ids = [azurerm_network_interface.default.id]
+  secure_boot_enabled   = true
 
   os_disk {
     name                 = "osdisk-${local.name}"

@@ -57,10 +57,3 @@ resource "azuread_directory_role_assignment" "intune_administrator" {
 #   role_id             = azuread_directory_role.security_administrator.template_id
 #   principal_object_id = azuread_user.administrator.object_id
 # }
-
-resource "azurerm_role_assignment" "reader" {
-  scope                = var.resource_group_id
-  role_definition_name = "Reader"
-  principal_type       = "User"
-  principal_id         = azuread_user.administrator.object_id
-}

@@ -161,6 +161,20 @@ Credential guard, VBS, and UEFI, memory integrity, etc.
 
 When using a virtual machine as opposed to the real device, follow [this procedure](https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-windows) to enable Entra ID authentication.
 
+> [!NOTE]
+> The required RBAC roles already already added by the Terraform configuration
+
+Example using the Azure CLI command:
+
+```sh
+az vm extension set --publisher Microsoft.Azure.ActiveDirectory --name AADLoginForWindows --resource-group rg-endpoint --vm-name vm-win11
+```
+
+> [!IMPORTANT]
+> Before signing in to the VM, make sure to do the first login with the user account and register the MFA.
+
+Download the RPD file and login.
+
 ### BitLocker / Disk Encryption
 
 

@@ -80,3 +80,10 @@ module "entraid" {
   intune_user_password             = var.entraid_intune_user_password
   resource_group_id                = azurerm_resource_group.default.id
 }
+
+resource "azurerm_role_assignment" "readers" {
+  for_each             = toset([module.entraid.administrator_user_object_id, module.entraid.endpoint_user_object_id])
+  scope                = azurerm_resource_group.default.id
+  role_definition_name = "Reader"
+  principal_id         = each.value
+}

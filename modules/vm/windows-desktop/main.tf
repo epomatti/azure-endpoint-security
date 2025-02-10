@@ -62,12 +62,12 @@ resource "azurerm_windows_virtual_machine" "default" {
 #   type_handler_version = "2.2"
 # }
 
-
 resource "azurerm_role_assignment" "administrator_user_login" {
   scope                = azurerm_windows_virtual_machine.default.id
   role_definition_name = "Virtual Machine Administrator Login"
   principal_id         = var.administrator_user_object_id
 }
+
 resource "azurerm_role_assignment" "endpoint_user_login" {
   scope                = azurerm_windows_virtual_machine.default.id
   role_definition_name = "Virtual Machine User Login"

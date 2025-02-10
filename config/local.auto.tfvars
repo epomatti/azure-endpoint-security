@@ -1,7 +1,8 @@
 # General
-subscription_id = "00000000-0000-0000-0000-000000000000"
-location        = "brazilsouth"
-workload        = "endpoint"
+subscription_id    = "00000000-0000-0000-0000-000000000000"
+location           = "brazilsouth"
+workload           = "endpoint"
+allowed_public_ips = ["1.2.3.4/32"]
 
 # Windows Server
 vm_windows_size       = "Standard_B8s_v2"

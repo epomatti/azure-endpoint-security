@@ -9,3 +9,7 @@ variable "resource_group_name" {
 variable "location" {
   type = string
 }
+
+variable "allowed_public_ips" {
+  type = list(string)
+}

@@ -10,6 +10,10 @@ variable "workload" {
   type = string
 }
 
+variable "allowed_public_ips" {
+  type = list(string)
+}
+
 variable "vm_windows_size" {
   type = string
 }

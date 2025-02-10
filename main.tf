@@ -33,6 +33,7 @@ module "vnet" {
   workload            = local.resource_affix
   resource_group_name = azurerm_resource_group.default.name
   location            = azurerm_resource_group.default.location
+  allowed_public_ips  = var.allowed_public_ips
 }
 
 resource "azurerm_log_analytics_workspace" "default" {

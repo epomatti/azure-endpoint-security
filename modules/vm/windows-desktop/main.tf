@@ -52,3 +52,24 @@ resource "azurerm_windows_virtual_machine" "default" {
     version   = var.windows_desktop_image_version
   }
 }
+
+# TODO: Enable
+# resource "azurerm_virtual_machine_extension" "AADLoginForWindows" {
+#   name                 = "AADLoginForWindows"
+#   virtual_machine_id   = azurerm_windows_virtual_machine.default.id
+#   publisher            = "Microsoft.Azure.ActiveDirectory"
+#   type                 = "AADLoginForWindows"
+#   type_handler_version = "2.2"
+# }
+
+
+resource "azurerm_role_assignment" "administrator_user_login" {
+  scope                = azurerm_windows_virtual_machine.default.id
+  role_definition_name = "Virtual Machine Administrator Login"
+  principal_id         = var.administrator_user_object_id
+}
+resource "azurerm_role_assignment" "endpoint_user_login" {
+  scope                = azurerm_windows_virtual_machine.default.id
+  role_definition_name = "Virtual Machine User Login"
+  principal_id         = var.endpoint_user_object_id
+}

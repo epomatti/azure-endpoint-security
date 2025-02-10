@@ -112,13 +112,6 @@ Access will be granted after the compliance check:
 
 <img src=".assets/intune-status.png" />
 
-## BitLocker
-
-https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu
-
-https://learn.microsoft.com/en-us/mem/intune/apps/app-management
-
-https://github.com/microsoft/Intune-PowerShell-SDK
 
 ## Configuration as Code
 
@@ -161,6 +154,23 @@ A policy can be created using a blade in the same view above, like this:
 Credential guard, VBS, and UEFI, memory integrity, etc.
 
 <img src=".assets/intune-deviceguard.png" />
+
+## Security Policies
+
+### Entra ID Authentication
+
+When using a virtual machine as opposed to the real device, follow [this procedure](https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-windows) to enable Entra ID authentication.
+
+### BitLocker / Disk Encryption
+
+
+
+
+## Other Services
+
+https://learn.microsoft.com/en-us/mem/intune/apps/app-management
+
+https://github.com/microsoft/Intune-PowerShell-SDK
 
 ## Windows images
 

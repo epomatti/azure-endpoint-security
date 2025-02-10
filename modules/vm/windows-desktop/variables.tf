@@ -42,3 +42,11 @@ variable "windows_desktop_image_sku" {
 variable "windows_desktop_image_version" {
   type = string
 }
+
+variable "administrator_user_object_id" {
+  type = string
+}
+
+variable "endpoint_user_object_id" {
+  type = string
+}

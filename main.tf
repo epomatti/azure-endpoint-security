@@ -68,6 +68,8 @@ module "vm_windows_desktop" {
   windows_desktop_image_offer     = var.windows_desktop_image_offer
   windows_desktop_image_sku       = var.windows_desktop_image_sku
   windows_desktop_image_version   = var.windows_desktop_image_version
+  administrator_user_object_id    = module.entraid.administrator_user_object_id
+  endpoint_user_object_id         = module.entraid.endpoint_user_object_id
 }
 
 module "entraid" {

@@ -15,6 +15,7 @@ Set the **required variables**:
 ```terraform
 subscription_id       = ""
 entraid_tenant_domain = ""
+allowed_public_ips    = [""]
 ```
 
 > [!TIP]

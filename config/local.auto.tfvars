@@ -19,7 +19,7 @@ windows_desktop_image_sku       = "win11-24h2-ent"
 windows_desktop_image_version   = "latest"
 
 # Entra ID
-entraid_tenant_domain            = "example.com"
+entraid_tenant_domain            = "<EXAMPLE.COM>"
 entraid_intune_admin_username    = "IntuneAdmin"
 entraid_intune_endpoint_username = "EndpointUser"
 entraid_intune_user_password     = "P@ssw0rd.123"

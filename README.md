@@ -238,7 +238,7 @@ To check the AutoPlay configuration:
 
 The configuration should be `Not Configured`.
 
-To create the policy on Intune, following this [reference](https://learn.microsoft.com/en-us/answers/questions/726088/disable-removable-drive-autorun-in-azure-ad):
+To create the policy on Intune, following this [reference](https://learn.microsoft.com/en-us/answers/questions/726088/disable-removable-drive-autorun-in-azure-ad) to set up [device restrictions](https://learn.microsoft.com/en-us/mem/intune/configuration/device-restrictions-configure):
 
 1. Create a profile, settings option
 2. Search for `AutoPlay`

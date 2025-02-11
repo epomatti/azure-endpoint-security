@@ -15,5 +15,5 @@ output "entraid_endpoint_upn" {
 }
 
 output "endpoint_public_ip_fqdn" {
-  value = var.create_windows_desktop ? module.vm_windows_desktop.public_id_domain_fqdn : ""
+  value = var.create_windows_desktop ? module.vm_windows_desktop[0].public_id_domain_fqdn : ""
 }

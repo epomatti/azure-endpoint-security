@@ -177,8 +177,49 @@ Download the RPD file and login.
 
 ### BitLocker / Disk Encryption
 
+Create the encryption policy and assign to the groups.
 
+Control the conditional access depending on your use case.
 
+Make sure the device is a member of the Entra ID assigned group.
+
+### Antivirus
+
+Create the antivirus policies:
+
+#### Defender Update Controls
+
+Antivirus updates (like security intelligence, engine updates, and platform updates) are delivered and applied.
+
+#### Microsoft Defender Antivirus
+
+Updates to the antivirus behavior ( real-time protection, scanning options, tamper protection, and remediation actions).
+
+### Device Lock
+
+Add a new policy:
+
+1. Device > Configuration Profiles >  Settings catalog
+2. + Add Settings > Device Lock > Max Inactivity Time Device Lock
+3. Toggle "Device Password Enabled" to `Enabled`
+4. Set the time to the desired value (in minutes)
+
+### Apps
+
+> [!TIP]
+> You can choose for it to be available as a featured app the Company Porta. Also, choose if required or available.
+
+#### Install an App
+
+1. In the `Apps` blade, create a new policy.
+2. Select a source, such as Microsoft Store.
+3. Select an app, such as DBeaver.
+
+#### Remove an App
+
+1. In the `Apps` blade, create a new policy.
+2. Select a source, such as Microsoft Store.
+3. Select an app, such as DBeaver.
 
 ## Other Services
 

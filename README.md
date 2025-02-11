@@ -207,7 +207,15 @@ Add a new policy:
 ### Apps
 
 > [!TIP]
-> You can choose for it to be available as a featured app the Company Porta. Also, choose if required or available.
+> You can choose for it to be available as a featured app in the Company Portal. Also, choose if required or available.
+
+Check the [troubleshoot](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/app-management/troubleshoot-app-install) article in case of issues. For example, this URL will help with installation issues:
+
+```
+https://aka.ms/IntuneAppDeployment
+```
+
+https://learn.microsoft.com/en-us/troubleshoot/mem/intune/app-management/apps-appear-unavailable
 
 #### Install an App
 
@@ -219,7 +227,25 @@ Add a new policy:
 
 1. In the `Apps` blade, create a new policy.
 2. Select a source, such as Microsoft Store.
-3. Select an app, such as DBeaver.
+3. In the assignment, select to uninstall an app.
+
+### Disable AutoPlay
+
+To check the AutoPlay configuration:
+
+1. Open `gpedit.msc`
+2. Computer Configuration → Administrative Templates → Windows Components → AutoPlay Policies
+
+The configuration should be `Not Configured`.
+
+To create the policy on Intune, following this [reference](https://learn.microsoft.com/en-us/answers/questions/726088/disable-removable-drive-autorun-in-azure-ad):
+
+1. Create a profile, settings option
+2. Search for `AutoPlay`
+3. Select `Turn off AutoPlay`
+4. `Enable` the toggle and select all `All drives`
+
+Test by inserting a USB drive with an `autorun.inf` file. Ensure no automatic execution occurs.
 
 ## Other Services
 

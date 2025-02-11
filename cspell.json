@@ -4,6 +4,7 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "autorun",
         "azuread",
         "azurerm",
         "azureuser",
@@ -12,6 +13,7 @@
         "entn",
         "Entra",
         "entraid",
+        "gpedit",
         "hashicorp",
         "intune",
         "ipcfg",

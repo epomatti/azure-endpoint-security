@@ -246,6 +246,10 @@ To create the policy on Intune, following this [reference](https://learn.microso
 
 Test by inserting a USB drive with an `autorun.inf` file. Ensure no automatic execution occurs.
 
+### Compliance
+
+Create a compliance policy and assign to the required devices.
+
 ## Other Services
 
 https://learn.microsoft.com/en-us/mem/intune/apps/app-management

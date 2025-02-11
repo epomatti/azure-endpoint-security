@@ -7,6 +7,7 @@ resource "azurerm_public_ip" "default" {
   resource_group_name = var.resource_group_name
   location            = var.location
   allocation_method   = "Static"
+  domain_name_label   = "${local.name}-999"
 }
 
 resource "azurerm_network_interface" "default" {

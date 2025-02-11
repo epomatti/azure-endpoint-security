@@ -13,3 +13,7 @@ output "entraid_administrator_upn" {
 output "entraid_endpoint_upn" {
   value = module.entraid.endpoint_user_upn
 }
+
+output "endpoint_public_ip_fqdn" {
+  value = var.create_windows_desktop ? module.vm_windows_desktop.public_id_domain_fqdn : ""
+}

@@ -242,8 +242,7 @@ To create the policy on Intune, following this [reference](https://learn.microso
 
 1. Create a profile, settings option
 2. Search for `AutoPlay`
-3. Select `Turn off AutoPlay`
-4. `Enable` the toggle and select all `All drives`
+3. Select all options (10 in total)
 
 Test by inserting a USB drive with an `autorun.inf` file. Ensure no automatic execution occurs.
 

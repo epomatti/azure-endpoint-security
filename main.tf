@@ -81,9 +81,13 @@ module "entraid" {
   resource_group_id                = azurerm_resource_group.default.id
 }
 
+locals {
+  readers_list = [module.entraid.administrator_user_object_id, module.entraid.endpoint_user_object_id]
+}
+
 resource "azurerm_role_assignment" "readers" {
-  for_each             = toset([module.entraid.administrator_user_object_id, module.entraid.endpoint_user_object_id])
+  count                = length(local.readers_list)
   scope                = azurerm_resource_group.default.id
   role_definition_name = "Reader"
-  principal_id         = each.value
+  principal_id         = local.readers_list[count.index]
 }
